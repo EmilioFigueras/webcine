@@ -6,7 +6,7 @@ class Inicio extends CI_Controller {
 		$this->load->helper('url');
 
 		//Cargo la vista pasandole los datos de configuracion
-		$this->load->view('inicio');
+		$this->load->view('cabecera');
 	}
 }
 ?>

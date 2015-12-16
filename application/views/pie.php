@@ -9,8 +9,6 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Full Slider - Start Bootstrap Template</title>
-
 	<link rel="stylesheet" href="css/footer-distributed.css">
 	
 	<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.css">

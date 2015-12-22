@@ -12,10 +12,12 @@
     <title>Título de la página</title>
 
     <!-- Bootstrap Core CSS -->
-    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="<?php echo base_url();?>css/bootstrap.min.css" rel="stylesheet">
 
     <!-- Custom CSS -->
-    <link href="css/full-slider.css" rel="stylesheet">
+    <link href="<?php echo base_url();?>css/full-slider.css" rel="stylesheet">
+
+    <link href="<?php echo base_url();?>css/style.css" rel="stylesheet">
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -39,13 +41,18 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="">Inicio</a>
+                <a class="navbar-brand" href="<?php echo base_url(); ?>">Inicio</a>
             </div>
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav">
                     <li>
-                        <a href="#">About</a>
+                        <a href="#">Películas por género</a>
+                        <ul>
+                            <li><a href="#">Gore divertido</a></li>
+                            <li><a href="#">Gore extremo</a></li>
+                             <li><a href="#">Género superlargo para probar como queda</a></li>
+                        </ul>
                     </li>
                     <li>
                         <a href="#">Services</a>
@@ -53,7 +60,7 @@
                 </ul>
                 <ul class="nav navbar-nav navbar-right">
                     <li>
-                        <a href="#">Login</a>
+                        <a href="<?php echo base_url(); ?>index.php/User">Login</a>
                     </li>
                 </ul>
             </div>

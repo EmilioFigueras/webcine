@@ -9,7 +9,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-	<link rel="stylesheet" href="css/footer-distributed.css">
+	<link rel="stylesheet" href="<?php echo base_url();?>css/footer-distributed.css">
 	
 	<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.css">
 
@@ -21,8 +21,6 @@
     <![endif]-->
 
 </head>
-<body>
-
 	<footer class="footer-distributed">
 
 		<div class="footer-right">
@@ -54,11 +52,23 @@
 
 
     <!-- jQuery -->
-    <script src="js/jquery.js"></script>
+    <script type="text/javascript" src="<?php echo base_url();?>js/jquery.js"></script>
+	<script type="text/javascript">
+	$(document).ready(function() {
+   		// Muestra y oculta los menús
+   		$('ul li:has(ul)').hover(
+      		function(e)
+      		{
+         		$(this).find('ul').css({display: "block"});
+      		},
+      		function(e)
+      		{
+         		$(this).find('ul').css({display: "none"});
+      		}
+   		);
+	});
+	</script>
 
     <!-- Bootstrap Core JavaScript -->
-    <script src="js/bootstrap.min.js"></script>
-
-</body>
-
+    <script src="<?php echo base_url();?>js/bootstrap.min.js"></script>
 </html>

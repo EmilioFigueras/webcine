@@ -1,14 +1,19 @@
+<body background="<?php echo base_url();?>images/thank1.jpg">
+<header class="carousel slide">
 <div id="content">
-<div class="signup_wrap">
-<div class="signin_form">
+ <br>
+ <h1 style="color:white">¡Gracias por registrarte!</h1>
+ <br>
  <?php echo form_open("index.php/User/login"); ?>
-  <label for="email">Email:</label>
+  <label style="color:white" for="email">Email:</label>
   <input type="text" id="email" name="email" value="" />
-  <label for="pass">Password:</label>
+<br>
+  <label style="color:white" for="pass">Contraseña:</label>
   <input type="password" id="pass" name="pass" value="" />
-  <input type="submit" class="" value="Sign in" />
+<br>
+<br>
+  <input type="submit" class="" value="Entrar" />
  <?php echo form_close(); ?>
-</div><!--<div class="signin_form">-->
-</div><!--<div class="signup_wrap">-->
-<h1>Thank!</h1>
 </div><!--<div id="content">-->
+</header>
+</body>

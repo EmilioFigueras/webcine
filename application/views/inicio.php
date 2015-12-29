@@ -26,23 +26,23 @@
         <div class="carousel-inner">
             <div class="item active">
                 <!-- Set the first background image using inline CSS below. -->
-                <div class="fill" style="background-image:url('http://www.morbidofest.com/wp-content/uploads/2014/07/evil-dead-red-band-full-trailer.jpg?537e30');"></div>
+                <div class="fill" style="background-image:url('<?php echo base_url();?>images/inicio1.jpg');"></div>
                 <div class="carousel-caption">
-                    <h2>Caption 1</h2>
+                    <h2>Evil Dead</h2>
                 </div>
             </div>
             <div class="item">
                 <!-- Set the second background image using inline CSS below. -->
-                <div class="fill" style="background-image:url('http://www.aucoeurdelhorreur.com/wp-content/uploads/2015/05/maxresdefault1.jpg');"></div>
+                <div class="fill" style="background-image:url('<?php echo base_url();?>images/inicio2.jpg');"></div>
                 <div class="carousel-caption">
-                    <h2>Caption 2</h2>
+                    <h2>Braindead</h2>
                 </div>
             </div>
             <div class="item">
                 <!-- Set the third background image using inline CSS below. -->
-                <div class="fill" style="background-image:url('http://placehold.it/1900x1080&text=Slide Three');"></div>
+                <div class="fill" style="background-image:url('<?php echo base_url();?>images/inicio3.jpg');"></div>
                 <div class="carousel-caption">
-                    <h2>Caption 3</h2>
+                    <h2>Balada triste de trompeta</h2>
                 </div>
             </div>
         </div>

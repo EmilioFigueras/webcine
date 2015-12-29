@@ -60,7 +60,15 @@
                 </ul>
                 <ul class="nav navbar-nav navbar-right">
                     <li>
-                        <a href="<?php echo base_url(); ?>index.php/User">Login</a>
+                        <a href="<?php echo base_url(); ?>index.php/User"><?php 
+                            if(($this->session->userdata('user_name')!=""))
+                                { 
+                                    echo "Hola, ".$this->session->userdata('user_name');
+                                }
+                                else{
+                                    echo "Login";
+                                }
+                                ?></a>
                     </li>
                 </ul>
             </div>

@@ -49,7 +49,7 @@
                     <li>
                         <a href="#">Películas por género</a>
                         <ul>
-                            <li><a href="#">Gore divertido</a></li>
+                            <li><a href="<?php echo base_url(); ?>index.php/Peliculas/consultar/1">Gore divertido</a></li>
                             <li><a href="#">Gore extremo</a></li>
                              <li><a href="#">Género superlargo para probar como queda</a></li>
                         </ul>

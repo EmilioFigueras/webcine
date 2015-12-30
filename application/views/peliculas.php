@@ -3,24 +3,21 @@
 </head>
 
 <body background="">
-<header class="carousel slide">
-<div id="content">
- <br>
- 	<?php
- 		foreach ($consulta->result_array() as $fila)
-		{
-    		echo "<h2>".$fila['Titulo']."</h2>";
-    		echo "<img src=".$fila['Imagen']." height=240 width=154>";
-    		echo "<h3>Dirigida por ".$fila['Director']."</h3>";
-    		echo "<h2>Sinopsis</h2>";
-    		echo "<h3>".$fila['Sinopsis']."</h3>";
-    		echo "<hr/>";
-		}
-		?>
+    <br><br>
+    <?php
+        foreach ($consulta->result_array() as $fila)
+        {
+            echo "<h2>".$fila['Titulo']."</h2>";
+            echo "<img src=".$fila['Imagen']." height=240 width=154>";
+            echo "<h3>Dirigida por ".$fila['Director']."</h3>";
+            echo "<h2>Sinopsis</h2>";
+            echo "<h3>".$fila['Sinopsis']."</h3>";
+            echo "<hr/>";
+        }
+        ?>
+ 	
 		
 
 
 
-</div><!--<div id="content">-->
-</header>
 </body>

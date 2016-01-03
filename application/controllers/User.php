@@ -12,19 +12,17 @@ class User extends CI_Controller{
    $this->welcome();
   }
   else{
-   $data['title']= 'Home';
    $this->load->helper('security');
-   $this->load->view('cabecera',$data);
-   $this->load->view("registration_view.php", $data);
-   $this->load->view('pie', $data);
+   $this->load->view('cabecera');
+   $this->load->view("registration_view.php");
+   $this->load->view('pie');
   }
  }
  public function welcome()
  {
-  $data['title']= 'Welcome';
-  $this->load->view('cabecera',$data);
-  $this->load->view('welcome_view.php', $data);
-  $this->load->view('pie',$data);
+  $this->load->view('cabecera');
+  $this->load->view('welcome_view.php');
+  $this->load->view('pie');
  }
  public function login()
  {
@@ -37,10 +35,9 @@ class User extends CI_Controller{
  }
  public function thank()
  {
-  $data['title']= 'Thank';
-  $this->load->view('cabecera',$data);
-  $this->load->view('thank_view.php', $data);
-  $this->load->view('pie',$data);
+  $this->load->view('cabecera');
+  $this->load->view('thank_view.php');
+  $this->load->view('pie');
  }
  public function registration()
  {

@@ -9,22 +9,14 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Título de la página</title>
+    <title>Cine B, el otro lado del cine.</title>
 
     <!-- Bootstrap Core CSS -->
     <link href="<?php echo base_url();?>css/bootstrap.min.css" rel="stylesheet">
 
-    <!-- Custom CSS -->
     <link href="<?php echo base_url();?>css/full-slider.css" rel="stylesheet">
 
     <link href="<?php echo base_url();?>css/style.css" rel="stylesheet">
-
-    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
-        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-    <![endif]-->
 
 </head>
 
@@ -49,14 +41,19 @@
                     <li>
                         <a href="#">Películas por género</a>
                         <ul>
-                            <li><a href="<?php echo base_url(); ?>index.php/Peliculas/consultar/1">Gore divertido</a></li>
-                            <li><a href="#">Gore extremo</a></li>
-                             <li><a href="#">Género superlargo para probar como queda</a></li>
+                            <li><a href="<?php echo base_url(); ?>index.php/Peliculas/consultar/1">Gore cómico</a></li>
+                            <li><a href="<?php echo base_url(); ?>index.php/Peliculas/consultar/2">Gore terrorífico</a></li>
+                            <li><a href="<?php echo base_url(); ?>index.php/Peliculas/consultar/3">Argumento surrealista</a></li>
+                            <li><a href="<?php echo base_url(); ?>index.php/Peliculas/consultar/4">Asesinos peculiares</a></li>
+                            <li><a href="<?php echo base_url(); ?>index.php/Peliculas/consultar/5">Clásicos de Serie B</a></li>
                         </ul>
                     </li>
-                    <li>
-                        <a href="#">Services</a>
-                    </li>
+                    <?php 
+                            if(($this->session->userdata('user_name')!=""))
+                                {   
+                                    echo "<li><a href=".base_url()."index.php/Peliculas/agregar>Agregar nueva película</a></li>";
+                                }?>
+                    
                 </ul>
                 <ul class="nav navbar-nav navbar-right">
                     <li>

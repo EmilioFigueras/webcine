@@ -14,6 +14,6 @@
 <br>
   <input type="submit" class="" value="Entrar" />
  <?php echo form_close(); ?>
-</div><!--<div id="content">-->
+</div>
 </header>
 </body>

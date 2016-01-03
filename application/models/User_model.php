@@ -9,7 +9,7 @@ class User_model extends CI_Model {
   $this->db->where("email",$email);
   $this->db->where("password",$password);
 
-  $query=$this->db->get("user");
+  $query=$this->db->get("Usuarios");
   if($query->num_rows()>0)
   {
    foreach($query->result() as $rows)

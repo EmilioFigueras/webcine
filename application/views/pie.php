@@ -13,13 +13,6 @@
 	
 	<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.css">
 
-    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
-        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-    <![endif]-->
-
 </head>
 	<footer class="footer-distributed">
 
@@ -67,6 +60,52 @@
       		}
    		);
 	});
+
+
+	//Votar
+	$(document).ready(function(){
+
+     $("#votar").click(function(){
+        
+        voto=$("#voto").val();
+        opinion=$("#opinion").val();
+        idUsuario=$("#idUsuario").val();
+        idPelicula=$("#idPelicula").val();
+
+        if(voto!="" && opinion!=""){
+
+           $.ajax({url:"<?php echo base_url().'index.php/Peliculas/votar'; ?>",type:'POST',data:{voto:voto,opinion:opinion, idUsuario:idUsuario, idPelicula:idPelicula},success:function(result){
+            $("#mens").html(result);
+
+          }});
+
+        }else{
+
+         $("#mens").html("Escriba una breve opinión");
+
+        }
+
+     });
+
+   });
+
+	//Actualizar el voto
+	$(document).ready(function(){
+
+     $("#modificar").click(function(){
+        
+        voto=$("#voto").val();
+        idUsuario=$("#idUsuario").val();
+        idPelicula=$("#idPelicula").val();
+
+        $.ajax({url:"<?php echo base_url().'index.php/Peliculas/actualizar'; ?>",type:'POST',data:{voto:voto, idUsuario:idUsuario, idPelicula:idPelicula},success:function(result){
+            $("#mens").html(result);
+
+          }});
+
+     });
+
+   });
 	</script>
 
     <!-- Bootstrap Core JavaScript -->

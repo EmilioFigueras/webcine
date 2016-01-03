@@ -28,7 +28,7 @@
                 <!-- Set the first background image using inline CSS below. -->
                 <div class="fill" style="background-image:url('<?php echo base_url();?>images/inicio1.jpg');"></div>
                 <div class="carousel-caption">
-                    <h2>Evil Dead</h2>
+                    <h2>The Evil Dead</h2>
                 </div>
             </div>
             <div class="item">

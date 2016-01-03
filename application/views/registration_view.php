@@ -1,5 +1,5 @@
-<header class="carousel slide">
-<div id="content">
+<br><br>
+<div>
 
  <h2>Iniciar sesión: </h2>
  <?php echo form_open("index.php/User/login"); ?>
@@ -35,4 +35,4 @@
   <br>
  <?php echo form_close(); ?>
 </div>
-</header>
+<br><br>

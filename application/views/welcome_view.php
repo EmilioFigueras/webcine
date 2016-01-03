@@ -1,5 +1,5 @@
 <header class="carousel slide">
-<div class="content">
+<div>
 	<h2>a</h2>
   <h2>Bienvenido, <?php echo $this->session->userdata('user_name'); ?>!</h2>
   <p>Ahora estas logueado, puedes puntuar y añadir nuevas películas.</p>

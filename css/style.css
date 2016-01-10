@@ -94,3 +94,15 @@ background: #454546;
 height: 20px;
 clear:both;
 }
+
+/*Contenido de las peliculas*/
+#contenido { 
+	width: 1024px; 
+	margin: 0 auto; 
+}
+
+/*Por ahora no se usa
+.iconos{
+	margin: 0 auto;
+}*/
+

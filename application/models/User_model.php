@@ -34,7 +34,7 @@ class User_model extends CI_Model {
     'email'=>$this->input->post('email_address'),
     'password'=>md5($this->input->post('password'))
   );
-  $this->db->insert('user',$data);
+  $this->db->insert('Usuarios',$data);
  }
 }
 ?>

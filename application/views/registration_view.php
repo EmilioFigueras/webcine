@@ -14,7 +14,7 @@
  <?php echo form_close(); ?>
 
 
-<center><h2>Registrarte: </h2></center>
+<center><h2>¡Regístrate!: </h2></center>
 <center><h5>Es gratis y rápido </h5></center>
  <?php echo validation_errors('<p class="error">'); ?>
  <?php echo form_open("index.php/User/registration"); ?>

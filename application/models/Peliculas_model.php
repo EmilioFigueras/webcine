@@ -43,6 +43,17 @@ class Peliculas_model extends CI_Model {
 
  }
 
+ public function nota_media($idPelicula){
+ 	$this->db->select_avg('puntuacion');
+ 	$this->db->from('Votaciones');
+ 	$this->db->where('id_Peliculas', $idPelicula);
+ 	$consulta = $this->db->get();
+ 	if($consulta->num_rows()>0){
+ 		$fila = $consulta->row();
+ 		return $fila->puntuacion;
+ 	}else return '-';
+ }
+
  public function actualizar(){
  	$actualizacion = array(
  		'id_Peliculas' => $this->input->post('idPelicula'), 
@@ -54,6 +65,8 @@ class Peliculas_model extends CI_Model {
  	$this->db->where('id_Usuarios', $this->input->post('idUsuario'));
  	$this->db->update('Votaciones', $actualizacion);
  }
+
+
 
  
 

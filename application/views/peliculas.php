@@ -14,6 +14,7 @@
         echo "<br>";
         echo "<h2>Sinopsis</h2>";
         echo "<h3>".$fila['sinopsis']."</h3>";
+        echo "<h2>Nota media de nuestros usuarios: ".$this->Peliculas_model->nota_media($fila['id'])."</h2>";
         //Si estas logueado
          if(($this->session->userdata('user_name')!="")){
             $votacion = $this->Peliculas_model->buscar_votacion($fila['id'], $this->session->userdata('user_id'));

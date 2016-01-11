@@ -17,8 +17,16 @@ class Peliculas_model extends CI_Model {
  }
 
  public function num_filas_Peliculas($tipo){
+ 	$this->db->select('id');
  	$this->db->from('Peliculas')->where('tipo', $tipo);
- 	return $this->db->count_all_results();
+ 	$consulta = $this->db->get();
+ 	$contador=0;
+ 	foreach ($consulta->result_array() as $fila){
+ 		$contador++;
+ 		if($contador==$consulta->num_rows()){
+ 			return $fila['id'];
+ 		}
+ 	}
  }
  public function primera_id($tipo){
  	$this->db->select('id');
@@ -28,6 +36,31 @@ class Peliculas_model extends CI_Model {
  	return $fila['id'];
  }
 
+  public function siguiente_id($tipo, $id){
+ 	$this->db->select('id');
+ 	$this->db->from('Peliculas')->where('tipo', $tipo);
+ 	$consulta = $this->db->get();
+ 	$encontrado=false;
+ 	foreach ($consulta->result_array() as $fila){
+ 		if($encontrado) return $fila['id'];
+ 		if($fila['id']==$id){
+ 			$encontrado=true;
+ 		}
+ 	}
+ }
+
+  public function anterior_id($tipo, $id){
+ 	$this->db->select('id');
+ 	$this->db->from('Peliculas')->where('tipo', $tipo);
+ 	$consulta = $this->db->get();
+ 	$ultima_id=0;
+ 	foreach ($consulta->result_array() as $fila){
+ 		if($fila['id']==$id){
+ 			return $ultima_id;
+ 		}
+ 		$ultima_id=$fila['id'];
+ 	}
+ }
 
  public function buscar_votacion($idPelicula, $idUsuario){
  	$this->db->select('puntuacion');

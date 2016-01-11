@@ -61,10 +61,10 @@
         echo "<br>";
         echo "<div align='center'>";
         if(($fila['id']-1)>=$this->Peliculas_model->primera_id($fila['tipo'])){
-            echo "<a href='".base_url()."index.php/Peliculas/consultar/1/".($fila['id']-1)."'> <img src='".base_url()."images/anterior.jpg' height=50 width=50> </a>";
+            echo "<a href='".base_url()."index.php/Peliculas/consultar/".$fila['tipo']."/".$this->Peliculas_model->anterior_id($fila['tipo'], $fila['id'])."'> <img src='".base_url()."images/anterior.jpg' height=50 width=50> </a>";
         }
         if( ($fila['id']+1) <= $this->Peliculas_model->num_filas_Peliculas($fila['tipo'])){
-            echo "<a href='".base_url()."index.php/Peliculas/consultar/1/".($fila['id']+1)."'> <img src='".base_url()."images/siguiente.jpg' height=50 width=50> </a>";
+            echo "<a href='".base_url()."index.php/Peliculas/consultar/".$fila['tipo']."/".$this->Peliculas_model->siguiente_id($fila['tipo'], $fila['id'])."'> <img src='".base_url()."images/siguiente.jpg' height=50 width=50> </a>";
         }
         echo "</div>";
         echo "<br>";

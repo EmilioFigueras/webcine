@@ -1,3 +1,5 @@
+<header class="carousel slide">
+
 <br><br>
 <h2><center>Agrega una nueva película. </center></h2>
 <h5><center>Confiamos en tí. </center></h5>
@@ -29,3 +31,5 @@
   <center><input type="submit" class="greenButton" value="Enviar" /></center>
   <br>
  <?php echo form_close(); ?>
+
+ </header>

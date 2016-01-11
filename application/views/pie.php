@@ -25,22 +25,16 @@
 		</div>
 		<div class="footer-left">
 			<p class="footer-links">
-				<a href="#">Home</a>
+				<a href="<?php echo base_url(); ?>">Home</a>
 					·
-				<a href="#">Blog</a>
+				<a href="<?php echo base_url(); ?>index.php/About">About</a>
 					·
-				<a href="#">Pricing</a>
-					·
-				<a href="#">About</a>
-					·
-				<a href="#">Faq</a>
-					·
-				<a href="#">Contact</a>
+				<a href="<?php echo base_url(); ?>index.php/Contact">Contact</a>
 			</p>
 
-			<p>Company Name &copy; 2015</p>
+			<p>Webcine &copy; 2015</p>
 		</div>
- 
+
 	</footer>
 
 

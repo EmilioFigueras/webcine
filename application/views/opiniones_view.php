@@ -1,3 +1,4 @@
+<header class="carousel slide">
 <?php
 	$primera = 0;
 	echo "<br /><br />";
@@ -7,7 +8,8 @@
 				echo "<h2>Opiniones de ".$fila['titulo'].": </h2>";
 				$primera++;
 			}
-			echo "<h3>Comentario del usuario ".$fila['username'].": ".$fila['opinion']."</h3><br />";
-
+			echo "<h3>Comentario del usuario ".$fila['username'].": ".$fila['opinion']."</h3>";
 		}
 	}
+?>	
+</header>
